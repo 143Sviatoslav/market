@@ -1,17 +1,22 @@
 import { useState } from "react";
 import Main from "./Main";
-import data from "./productsData.json"
 import "./style.css"
 
 const ExistProduct =()=>{
-const [basket, setBasket] = useState(0)
+const [basket, setBasket] = useState([])
 
-
+    function GetInfoBasket(){
+        // тут тобі потрібно наповнювати змінну basket об'єктами з ключами name та price
+        setBasket([...basket,
+            {name:'СЮДИ ПОТРІБНО ВСТАВИТИ НАЗВУ КУПЛЕНОГО ТОВАРУ',
+            price:'СЮДИ ПОТРІБНО ВСТАВИТИ ЦІНУ КУПЛЕНОГО ТОВАРУ'}
+        ])
+    }
 return  (
     <div className="basket">
-        <h2>basket: {}</h2>
+        <h2>basket: {basket.length}</h2>
         <ul>
-            {data.map(({ id, title, price}) => (
+            {basket.map(({ id, title, price}) => (
             <li key={id}>
                 <h2>{title}-{price}</h2>
             </li>
