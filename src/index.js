@@ -11,7 +11,8 @@ import { moneyContext } from './components/moneyContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <moneyContext.Provider value={{check, setCheck}}>
+    {/* <moneyContext.Provider value={{check, setCheck}}> */}
+    <moneyContext.Provider value={""}>
       <Main />
       <Products />
       <AddMoney1 />
